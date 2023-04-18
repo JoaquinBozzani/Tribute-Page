@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    background-color: #F0F0F0;
+    text-align: center;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  #main {
+    margin: 30px;
+    padding: 20px;
+    background-color: #E4E4E4;
+    border: 5px solid #E4E4E4;
+    border-radius: 20px;
+  }
+  
+  .slides {
+    width: 1280px;
+    height: 800px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+
+
+  .slide {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    transition: all .25s;
+    transform: translateX(-200%);
+  }
+  
+  .slide.next + .slide {
+    transform: translateX(200%);
+  }
+  
+  .slide.prev {
+    z-index: 10;
+    transform: translateX(-100%);
+  }
+
+  .slide.current {
+    z-index: 10;
+    transform: translateX(0);
+  }
+
+  .slide.next {
+    z-index: 10;
+    transform: translateX(100%);
+  }
+
+
+  #tribute-section {
+    display: block;
+    text-align: center;
+  }
+  
+  #quote {
+    display: block;
+    max-width: 600px;
+    margin: auto;
+    padding: 40px;
+    font-style: italic;
+    text-align: left;
+  }
+  
+  #list-item {
+    margin: 20px;
+    text-align: left;
+  }  
+
+  .img-caption {
+    padding: 1%;
+  }
+
+  .controls {
+    padding: 1%;
+  }
+
+  .slides:on-focus {
+    border: 10px solid black;
+  }
+
+  button {
+    display: inline-block;
+    background-color: #F0F0F0;
+    border: 1px solid #CBCBCB;
+    border-radius: 15px;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  button:hover {
+    background-color: #CBCBCB;
+  }
